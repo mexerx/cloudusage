@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Usage controller.
+ */
 @RestController
 public class UsageController {
 
@@ -21,6 +24,9 @@ public class UsageController {
     @Autowired
     private ResultSenderService resultSenderService;
 
+    /**
+     * Calculate and send usage.
+     */
     @GetMapping("/calculate-usage")
     public void calculateAndSendUsage() {
         List<Event> events = dataService.fetchEvents();

@@ -7,9 +7,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Usage service.
+ */
 @Service
 public class UsageService {
 
+    /**
+     * Calculate usage map.
+     *
+     * @param events the events
+     * @return the map
+     */
     public Map<String, Long> calculateUsage(List<Event> events) {
         Map<String, Long> usageMap = new HashMap<>();
         Map<String, Long> startTimes = new HashMap<>();
